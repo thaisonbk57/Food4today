@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 import Header from "./components/Header/Header";
 import Results from "./components/Results/Results";
+import Recipe from "./components/Recipe/Recipe";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Muli');
@@ -51,8 +52,14 @@ export default class extends Component {
         <Header />
         <Main>
           <Results />
-          <h2>Recipe</h2>
-          <h2>Shopping list</h2>
+          <Recipe />
+          <h2
+            style={{
+              flex: "1 0 25%"
+            }}
+          >
+            Shopping list
+          </h2>
         </Main>
       </App>
     );
