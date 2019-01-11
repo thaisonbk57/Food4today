@@ -7,12 +7,12 @@ const reducer = (state = initState, action) => {
     case actionTypes.fetchRecipes:
       return {
         ...state,
-        recipes: [...action.payload.recipes]
+        recipes: [...action.recipes]
       };
     case actionTypes.getRecipe:
       return {
         ...state,
-        currentRecipe: action.payload.recipe
+        currentRecipe: action.recipe
       };
     default:
       return state;
