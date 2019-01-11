@@ -19,7 +19,19 @@ body, html {
 }
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  width: 90vw;
+  margin: 0 auto;
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+`;
 
 class App extends Component {
   render() {
