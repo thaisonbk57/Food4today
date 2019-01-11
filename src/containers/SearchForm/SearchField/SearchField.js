@@ -18,5 +18,11 @@ const Input = styled.input`
 `;
 
 export default function(props) {
-  return <Input onChange={props.onChange} value={props.value} />;
+  return (
+    <Input
+      onChange={props.onChange}
+      value={props.value}
+      placeholder="Search over 1,000,000 recipes..."
+    />
+  );
 }

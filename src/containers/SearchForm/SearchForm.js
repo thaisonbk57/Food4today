@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import SearchButton from "./SearchButton";
-import SearchField from "./SearchField";
+import SearchButton from "./SearchButton/SearchButton";
+import SearchField from "./SearchField/SearchField";
 
 const Form = styled.form`
   background: #fff;
