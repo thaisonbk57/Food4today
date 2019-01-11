@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import RecipePhoto from "./RecipePhoto/RecipePhoto";
 import RecipeCookingTime from "./RecipeCookingTime/RecipeCookingTime";
+import RecipeIngredients from "./RecipeIngredients/RecipeIngredients";
 
 export default function(props) {
   const Recipe = styled.div`
@@ -26,6 +27,7 @@ export default function(props) {
     <Recipe>
       <RecipePhoto />
       <RecipeCookingTime />
+      <RecipeIngredients />
     </Recipe>
   );
 }
