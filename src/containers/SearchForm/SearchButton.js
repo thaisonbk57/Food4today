@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const SearchButton = styled.button`
-  padding: 13px 30px;
+  padding: 0 30px;
   font-size: 14px;
   background: linear-gradient(to right bottom, #fbdb89, #f48982);
   border: none;
@@ -10,6 +10,7 @@ const SearchButton = styled.button`
   transition: all 0.3s;
   color: #fff;
   font-weight: 500;
+  height: 40px;
   cursor: pointer;
 
   &:focus {

@@ -6,7 +6,10 @@ const Input = styled.input`
   background: none;
   font-family: inherit;
   color: #333;
+  display: block;
   font-size: 17px;
+  padding: 0 10px;
+  flex: 1;
 
   &:focus {
     border: none;

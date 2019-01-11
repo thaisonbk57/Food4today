@@ -9,11 +9,16 @@ const Form = styled.form`
   border-radius: 100px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
   transition: all 0.3s;
   position: relative;
-  width: 300px;
   justify-content: space-between;
+  height: 40px;
+  width: 450px;
+
+  &:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 40px #555;
+  }
 `;
 
 export default class SearchForm extends Component {
