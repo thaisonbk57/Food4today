@@ -1,11 +1,21 @@
 import React, { Component } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
+import SearchForm from "./containers/SearchForm/SearchForm";
+
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body, html {
+  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  height: 100vh;
+  font-family: 'Muli', sans-serif;
 }
 `;
 
@@ -20,6 +30,7 @@ class App extends Component {
     return (
       <Wrapper>
         <GlobalStyle />
+        <SearchForm />
       </Wrapper>
     );
   }
