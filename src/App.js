@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
-import SearchForm from "./containers/SearchForm/SearchForm";
+import Header from "./components/Header/Header";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Muli');
@@ -19,18 +19,14 @@ body, html {
 }
 `;
 
-const Wrapper = styled.div`
-  background: orangered;
-  font-size: 60px;
-  color: papayawhip;
-`;
+const Wrapper = styled.div``;
 
 class App extends Component {
   render() {
     return (
       <Wrapper>
         <GlobalStyle />
-        <SearchForm />
+        <Header />
       </Wrapper>
     );
   }
