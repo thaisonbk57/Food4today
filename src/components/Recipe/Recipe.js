@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import RecipePhoto from "./RecipePhoto/RecipePhoto";
-import RecipeDetail from "./RecipeDetail/RecipeDetail";
+import RecipeCookingTime from "./RecipeCookingTime/RecipeCookingTime";
 
 export default function(props) {
   const Recipe = styled.div`
@@ -25,7 +25,7 @@ export default function(props) {
   return (
     <Recipe>
       <RecipePhoto />
-      <RecipeDetail />
+      <RecipeCookingTime />
     </Recipe>
   );
 }

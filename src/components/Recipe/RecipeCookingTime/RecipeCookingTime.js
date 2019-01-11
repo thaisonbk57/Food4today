@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import icons from "./../../../../assets/icons.svg";
+import icons from "./../../../assets/icons.svg";
 
 const RecipeControllBar = styled.div`
   display: flex;
