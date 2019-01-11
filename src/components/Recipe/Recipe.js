@@ -4,6 +4,7 @@ import styled from "styled-components";
 import RecipePhoto from "./RecipePhoto/RecipePhoto";
 import RecipeCookingTime from "./RecipeCookingTime/RecipeCookingTime";
 import RecipeIngredients from "./RecipeIngredients/RecipeIngredients";
+import Button from "./../../components/UI/Button/Button";
 
 export default function(props) {
   const Recipe = styled.div`
@@ -28,6 +29,7 @@ export default function(props) {
       <RecipePhoto />
       <RecipeCookingTime />
       <RecipeIngredients />
+      <Button width={300}>ADD TO SHOPPING LIST</Button>
     </Recipe>
   );
 }

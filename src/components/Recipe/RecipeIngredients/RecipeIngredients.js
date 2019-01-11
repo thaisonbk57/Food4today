@@ -19,6 +19,7 @@ export default function(props) {
       <RecipeIngredient />
       <RecipeIngredient />
       <RecipeIngredient />
+      <RecipeIngredient />
     </Ingrdients>
   );
 }
