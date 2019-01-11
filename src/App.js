@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
 import Header from "./components/Header/Header";
+import Results from "./components/Results/Results";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Muli');
@@ -19,8 +20,9 @@ body, html {
 }
 `;
 
-const Wrapper = styled.div`
-  width: 90vw;
+const App = styled.div`
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   height: 90vh;
   position: fixed;
@@ -33,15 +35,26 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-class App extends Component {
+const Main = styled.main`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #1dd1a1;
+`;
+
+export default class extends Component {
   render() {
     return (
-      <Wrapper>
+      <App>
         <GlobalStyle />
         <Header />
-      </Wrapper>
+        <Main>
+          <Results />
+          <h2>Recipe</h2>
+          <h2>Shopping list</h2>
+        </Main>
+      </App>
     );
   }
 }
-
-export default App;
