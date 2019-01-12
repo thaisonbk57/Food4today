@@ -12,6 +12,7 @@ const rotate = keyframes`
 
 export default function(props) {
   const Loader = styled.div`
+    margin: 100px auto;
     border: ${props.borderWidth || 8}px solid #f3f3f3;
     border-radius: 50%;
     border-top: ${props.borderWidth || 8}px solid #3498db;
