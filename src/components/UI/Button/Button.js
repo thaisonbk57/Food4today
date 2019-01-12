@@ -24,6 +24,11 @@ export default function(props) {
     &:hover {
       transform: scale(1.1);
     }
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
   `;
 
   return <Button>{props.children}</Button>;

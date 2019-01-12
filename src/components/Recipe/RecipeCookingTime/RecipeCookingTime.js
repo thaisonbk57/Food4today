@@ -7,7 +7,7 @@ const RecipeControllBar = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 50px 40px 30px;
-  background: #ddd;
+  background: #18c396;
 `;
 
 const RecipeInfo = styled.div`
