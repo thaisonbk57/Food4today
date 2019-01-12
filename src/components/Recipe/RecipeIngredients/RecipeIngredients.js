@@ -14,12 +14,11 @@ const Ingrdients = styled.ul`
 `;
 
 export default function(props) {
-  return (
-    <Ingrdients>
-      <RecipeIngredient />
-      <RecipeIngredient />
-      <RecipeIngredient />
-      <RecipeIngredient />
-    </Ingrdients>
-  );
+  let ingrItems = null;
+
+  ingrItems = props.ingredients.map(ingredient => {
+    return <RecipeIngredient key={ingredient} ingredient={ingredient} />;
+  });
+
+  return <Ingrdients>{ingrItems}</Ingrdients>;
 }

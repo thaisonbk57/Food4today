@@ -6,7 +6,7 @@ import icons from "./../../../../assets/icons.svg";
 const Ingredient = styled.li`
   display: flex;
   float: left;
-  width: 50%;
+  flex-basis: 100%;
   padding: 8px 20px;
 `;
 
@@ -24,13 +24,15 @@ const IngredientCount = styled.p`
 const IngredientText = styled.p``;
 
 export default function(props) {
+  const ingredient = props.ingredient.split(" ");
+
   return (
     <Ingredient>
       <IngredientIcon>
         <use href={`${icons}#verified`} />
       </IngredientIcon>
-      <IngredientCount>1000</IngredientCount>
-      <IngredientText>can of tomatoes, whole or crushed</IngredientText>
+      <IngredientCount>{ingredient[0]}</IngredientCount>
+      <IngredientText>{ingredient.slice(1).join(" ")}</IngredientText>
     </Ingredient>
   );
 }

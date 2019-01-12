@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// TEST
-import photo from "./../../../assets/img/test-7.jpg";
-
 export default function(props) {
   const PhotoFrame = styled.figure`
     position: relative;
@@ -12,6 +9,7 @@ export default function(props) {
   const Img = styled.img`
     display: block;
     width: 100%;
+    max-height: 450px;
   `;
 
   const Caption = styled.figcaption`
@@ -36,9 +34,9 @@ export default function(props) {
 
   return (
     <PhotoFrame>
-      <Img src={photo} />
+      <Img src={props.image_url} />
       <Caption>
-        <span>Pasta with Tomato cream sauce</span>
+        <span>{props.title}</span>
       </Caption>
     </PhotoFrame>
   );

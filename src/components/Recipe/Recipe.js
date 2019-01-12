@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
+// import Loader from './../UI/Loader/Loader'
 
 import RecipePhoto from "./RecipePhoto/RecipePhoto";
 import RecipeCookingTime from "./RecipeCookingTime/RecipeCookingTime";
 import RecipeIngredients from "./RecipeIngredients/RecipeIngredients";
 import Button from "./../../components/UI/Button/Button";
 
-export default function(props) {
+function recipe(props) {
   const Recipe = styled.div`
     display: flex;
     flex-direction: column;
@@ -41,21 +43,35 @@ export default function(props) {
     }
   `;
 
+  // let content = <Loader borderWidth={10} width={100}></Loader>
+  const {
+    publisher,
+    ingredients,
+    source_url,
+    f2f_url,
+    recipe_id,
+    image_url,
+    title
+  } = props.currentRecipe;
+
   return (
     <Recipe>
-      <RecipePhoto />
+      <RecipePhoto title={title} image_url={image_url} />
       <RecipeCookingTime />
-      <RecipeIngredients />
+      <RecipeIngredients ingredients={ingredients} />
       <Button width={300}>ADD TO SHOPPING LIST</Button>
       <div className="howToCookIt">
         <h3>How to cook it</h3>
         <p>
-          This recipe was carefully designed and tested by{" "}
-          <b>The Pioneer Woman</b>. Please check out directions at their
-          website.
+          This recipe was carefully designed and tested by <b>{publisher}</b>.
+          Please check out directions at their website.
         </p>
         <Button width={130}>
-          <a href="/" target="_blank">
+          <a
+            href={source_url || f2f_url}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             DIRECTION
           </a>
         </Button>
@@ -63,3 +79,11 @@ export default function(props) {
     </Recipe>
   );
 }
+
+const mapStateToProps = state => {
+  return {
+    currentRecipe: state.currentRecipe.recipe
+  };
+};
+
+export default connect(mapStateToProps)(recipe);
