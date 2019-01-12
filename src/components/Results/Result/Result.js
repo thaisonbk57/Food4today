@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
 
-export default function(props) {
+import actions from "./../../../store/actions";
+
+function result(props) {
   const { publisher, title, recipe_id, image_url } = props;
 
   const Result = styled.div`
@@ -47,7 +50,11 @@ export default function(props) {
   `;
 
   return (
-    <Result>
+    <Result
+      onClick={() => {
+        props.getRecipe(recipe_id);
+      }}
+    >
       <div className="imgFrame" />
       <Recipe>
         <h3 className="recipe--title">{title}</h3>
@@ -56,3 +63,16 @@ export default function(props) {
     </Result>
   );
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getRecipe: recipe_id => {
+      dispatch(actions.getRecipe(recipe_id));
+    }
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(result);
