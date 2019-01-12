@@ -4,11 +4,11 @@ import styled from "styled-components";
 import logoImg from "./../../assets/img/logo.png";
 
 const Logo = styled.div`
-  width: 180px;
   padding-left: 40px;
+  flex: 1 0 25%;
 
   & img {
-    max-width: 100%;
+    max-width: 150px;
     display: block;
   }
 `;

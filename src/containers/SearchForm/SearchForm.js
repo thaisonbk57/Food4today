@@ -13,7 +13,8 @@ const Form = styled.form`
   position: relative;
   justify-content: space-between;
   height: 40px;
-  width: 450px;
+  margin: 0 40px;
+  flex: 1 0 400px;
 
   &:focus-within {
     transform: translateY(-5px);
