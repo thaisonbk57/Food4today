@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-// test
-import dishImg from "./../../../assets/img/test-4.jpg";
-
 export default function(props) {
+  const { publisher, title, recipe_id, image_url } = props;
+
   const Result = styled.div`
     display: flex;
     flex-direction: row;
@@ -24,7 +23,7 @@ export default function(props) {
       overflow: hidden;
       height: 70px;
       width: 70px;
-      background-image: url(${dishImg});
+      background-image: url(${image_url});
       background-size: cover;
       background-position: center;
     }
@@ -35,8 +34,15 @@ export default function(props) {
     padding-left: 18px;
 
     .recipe--title {
-      color: #fbdb89;
+      color: #9e2a2a;
       text-transform: uppercase;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .recipe--source {
+      text-transform: uppercase;
+      font-size: 12px;
     }
   `;
 
@@ -44,8 +50,8 @@ export default function(props) {
     <Result>
       <div className="imgFrame" />
       <Recipe>
-        <h3 className="recipe--title">Best Pizza ever</h3>
-        <p className="recipe--source">101 cookbooks</p>
+        <h3 className="recipe--title">{title}</h3>
+        <p className="recipe--source">{publisher}</p>
       </Recipe>
     </Result>
   );
